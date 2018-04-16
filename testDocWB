@@ -1,0 +1,6 @@
+
+		
+    var doc = require("document");
+    return doc.getAttachmentUrl("testDoc1", "rrrr.png", {"fieldName":"attachments"});
+
+	 

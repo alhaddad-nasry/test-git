@@ -1,0 +1,4 @@
+//publish("test", "testMessage");
+
+return "test";
+ 

@@ -1,0 +1,5 @@
+var doc = require("document");
+//return doc.getInstance("DefaultStore");
+
+return doc.getAttachmentUrl("testDoc1", "rrrr.png", {"fieldName":"attachments"});
+//return doc.getAttachmentUrl("F77A55E544FF65A636000788F51E36D9", "Memory Usage 100-100.png", {"fieldName":"apsdb_attachments","versionNumber": "1.0"}); 

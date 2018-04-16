@@ -1,0 +1,25 @@
+//var log = require("log"); log.setLevel("info");
+var queueModule = require("pubsub");
+var queueInstance = queueModule.getQueueInstance("test");
+return queueInstance;
+
+/*var doc = require("document");
+var i = doc.getInstance("DefaultStore");
+return 1;*/
+
+
+//if (request.body) {
+/*var body = {"temperature":16,"pressure":88,"time":"2018-01-09T15:19:39.253Z"};
+    log.info("body " + JSON.stringify(body));
+    var resp = queue("test","testScript", body);
+    if (resp.metadata.status == "failure") {
+        return resp.metadata;
+    }
+
+    return resp;*/
+//}
+javascript:void(0);
+/*return {
+    errorCode:"Missing_Parameters",
+    errorDetail: "Expecting request's body to contain parameters" 
+};*/ 

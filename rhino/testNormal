@@ -1,0 +1,8 @@
+var doc = require("document"); 
+var x = 0;
+while(x < 9) {
+    var document = doc.save({"docid": "doc-" + x});
+    x++;
+}
+
+return "abcdef";
