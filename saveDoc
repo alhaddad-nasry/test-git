@@ -34,5 +34,5 @@ var fields = {
         "history": "text"
     }
 };
-
+ 
 return documents.save(fields);
