@@ -7,6 +7,7 @@ var http = require("http");
 //this is how you can retrieve it
 var name = request.parameters.myName
 
+
 //Suppose you want to make that value available to future running script instances
 //you can store it in a persistent variable
 if (name != null) storage.local.theName = name
