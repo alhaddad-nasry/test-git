@@ -1,3 +1,2 @@
 return publish("test", "test123"); 
 // comment from local
-return 1;
