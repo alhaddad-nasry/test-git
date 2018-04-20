@@ -1,4 +1,4 @@
 //publish("test", "testMessage");
 
-return "test";
+return request;
  
