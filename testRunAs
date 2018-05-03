@@ -1,3 +1,0 @@
-return runAs(function(){
-     return 1;
-}, "user2"); 

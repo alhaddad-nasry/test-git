@@ -1,7 +1,0 @@
-var pubsub = require("pubsub");
-var queue = pubsub.getTopicInstance("test");
-return queue.publish({"param1":"test123message"}, false);
-
-
-//queue.queue("test", {"param1": "value1", "param1": "value1"});
-//return request.parameters["param1WS"];

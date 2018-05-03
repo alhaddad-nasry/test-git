@@ -1,2 +1,0 @@
-return request.parameters.temperature + 1;
- 
