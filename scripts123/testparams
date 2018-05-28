@@ -1,0 +1,3 @@
+var document = require("document");
+
+return document.query("");
