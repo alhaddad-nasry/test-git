@@ -1,1 +1,5 @@
+<<<<<<< Updated upstream
 return 4;
+=======
+return 3;
+>>>>>>> Stashed changes
