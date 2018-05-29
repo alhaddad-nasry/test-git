@@ -1,5 +1,1 @@
-<<<<<<< Updated upstream
-return 24;
-=======
-return 25;
->>>>>>> Stashed changes
+return 1;
