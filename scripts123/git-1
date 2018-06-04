@@ -4,4 +4,4 @@ return 0;
 return 1; 
 //return require("pubsub");
 //return require("pubsub").getInstance("test");
-return 123;
+return 123456;
