@@ -3,4 +3,4 @@ return require("document").getInstance("DefaultStore");
 return 0;
 //return require("pubsub");
 //return require("pubsub").getInstance("test");
-return 1;
+return 123;
