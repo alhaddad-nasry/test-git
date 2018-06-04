@@ -1,4 +1,5 @@
 //return require("document");
 return require("document").getInstance("DefaultStore");
+
 //return require("pubsub");
 //return require("pubsub").getInstance("test");
