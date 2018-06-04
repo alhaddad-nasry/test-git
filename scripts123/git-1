@@ -2,5 +2,6 @@
 return require("document").getInstance("DefaultStore");
 return 0;
 //return require("pubsub");
+return 2;
 //return require("pubsub").getInstance("test");
 return 123;
