@@ -1,2 +1,3 @@
 //12312311122211
+return 123;
 return require("pubsub").getInstance(parseInt("22")).subscribe("git-1");
