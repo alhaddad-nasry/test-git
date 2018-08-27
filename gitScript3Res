@@ -1,6 +1,1 @@
- 
-	
-         
-return "hayya";
-
-
+var color; color = "blue";
