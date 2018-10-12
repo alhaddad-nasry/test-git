@@ -1,0 +1,8 @@
+for(var i = 0; i < 500; i++) {
+	// queue a script and get its handle
+	var handle = apsdb.callApi("QueueScript", {"apsdb.scriptName": "test-save-doc"}, null);
+
+	// save the handle in a documen
+	apsdb.callApi("SaveDocument", {"apsdb.documentKey": "handle-doc-" + i, "handle":handle}, null);
+}
+    

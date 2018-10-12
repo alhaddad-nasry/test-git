@@ -1,0 +1,5 @@
+// sleep some time so that successive queued jobs have a higher chance to be consumer by other free QS's
+testHelper.sleep(10000);
+
+// save a document to verify that the queued script was executed
+return apsdb.callApi("SaveDocument", {"aaa":"b"}, null);

@@ -1,0 +1,8 @@
+var lib = require("cloudamqp/cloudamqpLib");
+var config = require("cloudamqp/config").getConfig();
+
+var authorization = lib.buildAmqpApiAuthorization(config.username, config.password);
+
+var vhosts = lib.amqpApi(config.baseUrl, "vhosts", authorization);
+
+return vhosts;

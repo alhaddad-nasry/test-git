@@ -1,0 +1,73 @@
+var clusterName = request.parameters.clusterName;
+var strAuthKeys = request.parameters.authKeys;
+
+if(clusterName == null || clusterName.length == 0) {
+    return "Cluster name is required";
+}
+
+if(strAuthKeys == null || strAuthKeys.length == 0) {
+    return "At least one authKey is required";
+}
+
+var authKeys = JSON.parse(strAuthKeys);
+if(authKeys.length == 0) {
+    return "At least one authKey is required";
+}
+
+var http = require("http");
+
+var vhosts = {};
+for(var i = 0; i < authKeys.length; i++) {
+    var authKey = authKeys[i];
+    var vhost = btoa(authKey + "@" + clusterName);
+    var params = {
+        "url" : request.parameters.baseUrl + "/api/vhosts/" + vhost,
+        "method" : "DELETE",
+        "headers" : {
+            "Authorization" : "Basic " + request.parameters.authToken
+        }
+    }
+    log.debug("Deleting virtual host [" + vhost + "]");
+    var response = http.request(params);
+    vhosts[vhost] = response;
+    
+}
+return vhosts;
+
+/*var http = require("http");
+var params = {
+    "url" : request.parameters.baseUrl + "/api/vhosts",
+    "headers" : {
+        "Authorization" : "Basic " + request.parameters.authToken
+    }
+}
+var response = http.request(params);
+var vhosts = JSON.parse(response.body);
+
+var vhostsResult = {};
+
+for(var i = 0; i < vhosts.length; i++) {
+    var vhost = vhosts[i];
+    var name = vhost.name;
+    var decodedName = null;
+    var authKey = null;
+    var clusterName = null;
+    if(name == request.parameters.username || name == "/" || name == "test") {
+        decodedName = name;
+        clusterName = name;
+    } else {
+        decodedName = atob(name);
+        authKey = decodedName.split("@")[0];
+        clusterName = decodedName.split("@")[1];
+    }
+    if(clusterName == "test_scriptr") {
+        if(vhostsResult[clusterName] == null) {
+            vhostsResult[clusterName] = [];
+            vhostsResult[clusterName + "-count"] = 0;
+        }
+        vhostsResult[clusterName].push(authKey + "-" + name);
+        vhostsResult[clusterName + "-count"] = vhostsResult[clusterName + "-count"] + 1;
+    }
+}
+
+return vhostsResult;*/

@@ -1,0 +1,15 @@
+var lib = require("cloudamqp/cloudamqpLib");
+var config = require("cloudamqp/config").getConfig();
+var authorization = lib.buildAmqpApiAuthorization(config.username, config.password);
+
+var vhosts = lib.amqpApi(config.baseUrl, "vhosts", authorization);
+
+var vhostsResult = [];
+
+for(var i = 0; i < vhosts.length; i++) {
+    var vhost = vhosts[i];
+    if(vhost["message_stats"] && vhost["message_stats"]["deliver_get"] && vhost["message_stats"]["deliver_get"] > 0) {
+        vhostsResult.push(vhost);
+    }
+}
+return vhostsResult;

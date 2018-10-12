@@ -1,0 +1,14 @@
+var responses = {};
+
+var channel = require("channel");
+responses["createChannel"] = channel.createChannel("ch1", {"subscribeACL":"anonymous", "publishACL":"anonymous"});
+
+var pubsub = require("queue");
+var instance = pubsub.getInstance("ch1");
+responses["getStatistics"] = instance.getStatistics();
+responses["queue"] = instance.queue("queuing/subscriberScript", {"param1": "value1"});
+responses["peek"] = instance.peek();
+responses["clear"] = instance.clear();
+
+responses["deleteChannel"] = channel.deleteChannel("ch1");
+return responses;

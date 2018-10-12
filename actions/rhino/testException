@@ -1,0 +1,25 @@
+systemLogger.setLevel("OFF"); 
+var validScope = [];
+validScope['script:execute'] = -1;
+validScope['script:read'] = -1;
+validScope['script:write'] = -1;
+validScope['hook:write'] = -1;
+
+var scope =  "hook:write";
+// check that the scope has a valid value. 
+var scopeArray = scope.split(' ');
+for(var i = 0; i < scopeArray.length; i++){
+    if(!validScope[scopeArray[i]]){
+        return {
+            'status': 'failure',
+            'errorCode' : 'invalid_scope',
+            'errorDetail':'Invalid scope'
+        }
+    }
+    if(validScope[scopeArray[i]] == null){
+        validScope[scopeArray[i]] = 1;
+    }else{
+        validScope[scopeArray[i]]++;
+    }
+}
+return validScope;
