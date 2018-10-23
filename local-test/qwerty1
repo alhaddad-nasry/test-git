@@ -1,0 +1,4 @@
+//return JSON.parse(require("queue").getInstance("test").listConnections().result);
+
+return 1; 
+
