@@ -34,7 +34,7 @@ SimpleStateMachine.prototype.event = function (name) {
 	var state = this.transitions[this.storage.state]
 	var transition = state[name];
 	if(transition){
-	      	log.debug("found transition [" + name + "]");
+	      	log.debug("found transition [" +  name +  "]");
 			var branch = transition["branch"];
 	      	var code = transition["code"];
 	       	if(code && branch){
