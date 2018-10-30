@@ -1,3 +1,0 @@
-var pubsub = require("pubsub");
-var instance = pubsub.getInstance("dbCpuChannel");
-return instance.publish("dbCpu message");

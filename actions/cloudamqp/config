@@ -1,9 +1,0 @@
-function getConfig() {
-    return {
-        "baseUrl": request.parameters.baseUrl,
-        "clusterName": "scriptr",
-        "username": request.parameters.username,
-        "password": request.parameters.password
-    };
-}
-return getConfig();

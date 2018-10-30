@@ -1,9 +1,0 @@
-var promoCode = "MultiTech";
-
-var params = {
-    "apsdb.store": "PromoCodeStore",
-    "apsdb.query": 'rootKey="' + promoCode.toLowerCase() + '"',
-    "apsdb.queryFields": "*"
-};
-var result = apsdb.callApi("Query", params, null);
-return result;
