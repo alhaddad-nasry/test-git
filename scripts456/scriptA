@@ -1,0 +1,2 @@
+var x = "A";
+return 1;
