@@ -1,4 +1,5 @@
-var a = "testing ";
+var a = "testing 456";
+var xyz;
 var b = "resolve ";
 var c = "remotely";
 return "testResolve: " + a + b + c;
