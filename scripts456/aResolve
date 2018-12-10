@@ -1,1 +1,4 @@
+var a = "testing ";
+var b = "resolve ";
+var c = "remotely";
 return "testResolve";
