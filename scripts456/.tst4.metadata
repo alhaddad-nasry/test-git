@@ -1,1 +1,1 @@
-return 123;
+{"acl":{"read":"nobody","write":"nobody","execute":"scriptr"},"contentType":"application\/vnd.scriptr-javascript"}
