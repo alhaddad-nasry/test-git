@@ -1,0 +1,9 @@
+var params = {
+    "apsdb.repositoryOwner": "alhaddad-nasry",
+    "apsdb.repositoryName": "module1",
+    "apsdb.repositoryBranch": "master",
+    "apsdb.repositoryPath": "/",
+    "apsdb.fileNamePattern": ".*",
+    "autoInstall": "true"
+};
+return apsdb.callApi("GitCheckout", params, null);
