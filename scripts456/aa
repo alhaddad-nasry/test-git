@@ -1,0 +1,3 @@
+var http = require('http');
+
+return http.request({url:'https://web.scriptr.io/apsdb/rest/O508EF82CA/VerifyCredentials?apsws.time=1545318347089&apsws.authSig=53ccd5fc15fb2460491ef9a1d55387ca&apsws.authMode=simple'});

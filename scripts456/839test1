@@ -1,0 +1,2 @@
+sendMail('nasry.haddad@elementn.com', 'Admin Bot', 'Test script', 'test');
+//return 1;
