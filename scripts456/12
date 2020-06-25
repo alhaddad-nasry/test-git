@@ -1,0 +1,6 @@
+var x = 0;
+var y = "";
+for(x; x < 100; x++) {
+    y = y + x + "-";
+}
+return sendMail("nasry.haddad@elementn.com", "nasry.haddad@elementn.com", "test queuing", y);

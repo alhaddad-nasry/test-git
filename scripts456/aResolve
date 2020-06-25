@@ -1,0 +1,5 @@
+var a = "testing 456798012345";
+var xyz;
+var b = "resolve ";
+var c = "remotely";
+return "testResolve: " + a + b + c;

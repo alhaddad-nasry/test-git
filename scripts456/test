@@ -1,0 +1,8 @@
+ var scriptrCommon = apsdb.require("registration/common");
+var configuration = scriptrCommon.getConfiguration();
+
+// get advanced configuration
+var advancedScriptrCommon = apsdb.require("registration/common.advanced");
+var advancedConfig = advancedScriptrCommon.getConfiguration();
+
+return require("user").getUserInfo(configuration, advancedConfig);
