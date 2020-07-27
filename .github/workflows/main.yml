@@ -19,7 +19,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: satak/webrequest-action@master
+    - uses: alhaddad-nasry/test-git@master
       with:
-        url: https://my-json-server.typicode.com/typicode/demo/posts
+        url: https://api-test.apstrata.com/github/testActions?auth_token=UjYxNTMzNzUxNw==
         method: GET
